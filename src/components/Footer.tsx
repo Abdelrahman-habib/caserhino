@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="h-full flex flex-col md:flex-row md:justify-between items-center justify-center">
           <div className="text-center md:text-left pb-2 md:pb-0">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} CaseCobra. All rights reserved.
+              © {new Date().getFullYear()} CaseRhino. All rights reserved.
             </p>
           </div>
           <div className="flex items-center justify-center">

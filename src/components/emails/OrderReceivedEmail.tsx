@@ -23,10 +23,7 @@ const OrderReceivedEmail = ({
   orderId: string;
   orderDate: string;
 }) => {
-  const baseUrl =
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:3000"
-      : "https://casecobra-wheat.vercel.app";
+  const baseUrl = process.env.NEXT_PUBLIC_SERVER_URL;
   return (
     <Html>
       <Head />
@@ -100,7 +97,7 @@ const OrderReceivedEmail = ({
             </Row>
             <Row>
               <Text style={footer.text}>
-                &copy; CaseCobra, Inc. All Rights Reserved
+                &copy; CaseRhino, Inc. All Rights Reserved
               </Text>
             </Row>
           </Section>

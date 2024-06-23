@@ -25,7 +25,7 @@ export default function Home() {
               <p className="mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
                 Capture your favorite memories with your own,{" "}
                 <span className="font-semibold">one-of-one</span> phone case.
-                CaseCobra allows you to protect your memories, not just your
+                CaseRhino allows you to protect your memories, not just your
                 phone.
               </p>
               <ul className="mt-8 space-y-2 text-left font-meduim flex flex-col items-center sm:items-start">
@@ -141,7 +141,7 @@ export default function Home() {
                     the image is super clear
                   </span>
                   , on the case I had before, the image started fading into
-                  yellow-ish color after a couple weeks. Love it.&quot;
+                  yellow color after a couple weeks. Love it.&quot;
                 </p>
               </div>
               <div className="flex gap-4 mt-2">
@@ -181,7 +181,6 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex gap-4 mt-2">
-                1
                 <img
                   src="/users/user-4.jpg"
                   alt="user image"
