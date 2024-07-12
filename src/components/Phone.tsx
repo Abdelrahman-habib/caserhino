@@ -4,9 +4,16 @@ import { cn } from "@/lib/utils";
 interface PhoneProps extends React.HTMLAttributes<HTMLDivElement> {
   imgSrc: string;
   dark?: boolean;
+  noEdges?: boolean;
 }
 
-const Phone = ({ imgSrc, className, dark = false, ...props }: PhoneProps) => {
+const Phone = ({
+  imgSrc,
+  className,
+  dark = false,
+  noEdges = false,
+  ...props
+}: PhoneProps) => {
   return (
     <div
       className={cn(
@@ -18,7 +25,9 @@ const Phone = ({ imgSrc, className, dark = false, ...props }: PhoneProps) => {
       <img
         className="pointer-events-none z-50 select-none"
         src={
-          dark
+          noEdges
+            ? "/phone-template.png"
+            : dark
             ? "/phone-template-dark-edges.png"
             : "/phone-template-white-edges.png"
         }
@@ -28,7 +37,10 @@ const Phone = ({ imgSrc, className, dark = false, ...props }: PhoneProps) => {
         <img
           src={imgSrc}
           alt="overlaying phone image"
-          className="object-cover min-w-full min-h-full"
+          className={cn(
+            "object-cover min-w-full min-h-full",
+            noEdges && "rounded-[50px]"
+          )}
         />
       </div>
     </div>

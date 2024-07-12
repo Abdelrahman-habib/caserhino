@@ -43,12 +43,14 @@ const Navbar = async () => {
                 <Link
                   href="/configure/upload"
                   className={buttonVariants({
+                    variant: "shimmer",
                     size: "sm",
-                    className: "hidden sm:flex items-center gap-1",
+                    className:
+                      "hidden sm:flex items-center gap-1 group bg-primary",
                   })}
                 >
                   Create case
-                  <ArrowRight className="ml-1.5 h-5 w-5" />
+                  <ArrowRight className="h-5 w-5 ml-1.5 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
                 </Link>
               </>
             ) : (
@@ -76,12 +78,14 @@ const Navbar = async () => {
                 <Link
                   href="/configure/upload"
                   className={buttonVariants({
+                    variant: "shimmer",
                     size: "sm",
-                    className: "hidden sm:flex items-center gap-1",
+                    className:
+                      "hidden sm:flex items-center gap-1 group bg-primary",
                   })}
                 >
                   Create case
-                  <ArrowRight className="ml-1.5 h-5 w-5" />
+                  <ArrowRight className="h-5 w-5 ml-1.5 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
                 </Link>
               </>
             )}

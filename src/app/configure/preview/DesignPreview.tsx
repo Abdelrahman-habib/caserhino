@@ -174,9 +174,10 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
             <div className="mt-2 flex justify-end pb-12">
               <Button
                 onClick={() => handleCheckout()}
-                className="px-4 sm:px-6 lg:px-8"
+                className="px-4 sm:px-6 lg:px-8 group"
               >
-                Check out <ArrowRight className="ml-1.5 h-4 w-4 inline" />
+                Check out
+                <ArrowRight className="h-4 w-4 ml-1.5 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
               </Button>
             </div>
           </div>

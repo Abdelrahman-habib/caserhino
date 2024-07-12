@@ -16,12 +16,10 @@ export const formatPrice = (price: number) => {
 export function constructMetadata({
   title = "CaseRhino - custom high-quality phone cases",
   description = "Create custom high-quality phone cases in seconds",
-  image = "/thumbnail.png",
   icons = "/favicon.ico",
 }: {
   title?: string;
   description?: string;
-  image?: string;
   icons?: string;
 } = {}): Metadata {
   return {
@@ -30,20 +28,11 @@ export function constructMetadata({
     openGraph: {
       title,
       description,
-      images: [
-        {
-          url: image,
-          width: 1200,
-          height: 630,
-          alt: "CaseRhino - custom high-quality phone cases",
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [image],
       creator: "@asdeadasleavess",
     },
     metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL ?? ""),
