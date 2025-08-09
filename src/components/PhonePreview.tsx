@@ -2,7 +2,7 @@
 "use client";
 
 import { CaseColor } from "@prisma/client";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { AspectRatio } from "./ui/aspect-ratio";
 import { cn } from "@/lib/utils";
 
@@ -25,17 +25,18 @@ const PhonePreview = ({
   if (color == "green") caseBackgroundColor = "bg-green-950";
   if (color == "rose") caseBackgroundColor = "bg-rose-950";
 
-  const handleResize = () => {
+  const handleResize = useCallback(() => {
     if (!ref.current) return;
     const { width, height } = ref.current.getBoundingClientRect();
     setRenderdDimensions({ width, height });
-  };
+  }, []);
+
   useEffect(() => {
     handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
-  }, [ref.current]);
+  }, [handleResize]);
 
   return (
     <AspectRatio ref={ref} ratio={3000 / 2001} className="relative">
